@@ -11,7 +11,36 @@ script.
     //initialize swiper when document ready  
     var mySwiper = new Swiper ('.swiper-container', {
       // Optional parameters
-      direction: 'horizontal',
-      loop: true
+      direction: 'horizontal'
     })        
   });
+
+script.
+  //- show/hide report page title bar
+  $('.swiper-container').on('click', function() {
+    $('.report-page-title').toggleClass('show');
+  })
+
+  //- show/hide report context menu
+  $('.btn-context-menu').on('click', function() {
+    $('.context-menu-overlay').toggleClass('show');
+    $('#context-menu').toggleClass('show');
+  })
+
+  //- show/hide report page list
+  $('.btn-page-title').on('click', function() {
+    $('.context-menu-overlay').toggleClass('show');
+    $('#page-list').toggleClass('show');
+  })
+
+  //- show/hide report page list
+  $('.btn-related-reports').on('click', function() {
+    $('.context-menu-overlay').toggleClass('show');
+    $('#related-reports').toggleClass('show');
+  })
+
+  //- close context menu
+  $('.context-menu-overlay').on('click', function() {
+    $(this).removeClass('show');
+    $('.context-menu').removeClass('show');
+  })

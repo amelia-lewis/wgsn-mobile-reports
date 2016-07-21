@@ -2,6 +2,29 @@
   position: fixed
   top: 0
   left: 0
-  height: 40px
+  height: $report-header-height
   width: 100%
-  z-index: 100
+  z-index: 200
+
+  h4
+    @extend .text-truncate
+    width: calc(100% - 2 * (#{$report-header-height}))
+
+  .btn-related-reports,
+  .btn-context-menu
+    width: $report-header-height
+    height: $report-header-height
+
+.btn-page-title
+  position: fixed
+  top: $report-header-height
+  left: 0
+  height: $report-page-title-height
+  width: 100%
+  z-index: 80
+  opacity: 0
+  pointer-events: none
+
+  &.show
+    opacity: 0.85
+    pointer-events: all

@@ -4,19 +4,30 @@ block append vars
   - bodyclass = 'report-view'
 
 block content
-  .report-header.block-sm.overflow-auto.bg-white.border-bottom
-    i.fa.fa-angle-down.pull-left
-    h4.pull-left.text-uppercase.tight Women's Colour S/S 18: Youth Tonic
-    i.fa.fa-ellipsis-h.pull-right
+  //- REPORT HEADER BAR
+  .report-header.overflow-auto.bg-white.border-bottom
+    .btn-related-reports.pull-left.flex-center: i.fa.fa-angle-down
+    h4.pull-left.block-ver-sm.text-uppercase.tight Women's Colour S/S 18: Youth Tonic
+    .btn-context-menu.pull-right.flex-center: i.fa.fa-ellipsis-h
+
+  //- REPORT PAGE TITLE BAR
+  .btn-page-title.show.block-hor-sm.block-ver-xs.bg-black.overflow-auto.transition
+    p.tight.text-uppercase.text-smaller.pull-left 2. Introduction
+    i.fa.fa-list.pull-right
 
   //- SWIPER
   .swiper-container
     .swiper-wrapper
-      .swiper-slide.cover: include slide-1
+      .swiper-slide.cover.flex-center.bg-lt-grey: include slide-1
       .swiper-slide: include slide-2
       .swiper-slide: include slide-2
       .swiper-slide: include slide-2
       .swiper-slide: include slide-2
 
-    .swiper-button-prev.flex-center.border: i.fa.fa-angle-left
-    .swiper-button-next.flex-center.border: i.fa.fa-angle-right
+    //- .swiper-button-prev.flex-center.bg-white.border: i.fa.fa-angle-left
+    //- .swiper-button-next.flex-center.bg-white.border: i.fa.fa-angle-right
+
+  .context-menu-overlay.transition
+  include context-menu
+  include page-list
+  include related-reports

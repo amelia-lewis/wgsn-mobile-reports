@@ -1,0 +1,52 @@
+.context-menu-overlay
+  position: absolute
+  top: 0
+  left: 0
+  width: 100vw
+  height: 100vh
+  background: rgba(black, 0.6)
+  opacity: 0
+  pointer-events: none
+  z-index: 30
+
+  &.show
+    opacity: 1
+    pointer-events: all
+
+.context-menu
+  position: fixed
+  bottom: 0
+  left: 0
+  width: 100%
+  @extend .bg-white
+  @extend .transition
+  transform: translate(0, 100%)
+  z-index: 100
+
+  &.show
+    transform: translate(0, 0) !important
+
+  .context-menu-header
+    @extend .bg-lt-grey
+    @extend .block-sm
+
+  .context-menu-content
+    ul
+      @extend .tight
+      // max-height: calc(100vh - #{$report-header-height} - #{$report-page-title-height} - 41px)
+      max-height: 400px
+      overflow: auto
+      
+      li
+        @extend .block-sm
+        @extend .tight
+        @extend .border-bottom
+
+        &:last-of-type
+          border-bottom: none
+
+// #page-list
+//   top: $report-header-height + $report-page-title-height
+//   bottom: auto
+//   transform: translate(0, calc(-100% - #{$report-page-title-height}))
+//   z-index: 60
