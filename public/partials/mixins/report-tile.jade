@@ -1,0 +1,7 @@
+mixin article-tile(img, category, title, date)
+  a.article-tile.block-bot-lg(href="/report")
+    img(src=img width="100%")
+    .block-top-xs.block-bot-md
+      p.text-grey.tight= category
+      h3.tight= title
+      p.text-grey= date

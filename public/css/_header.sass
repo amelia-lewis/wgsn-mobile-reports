@@ -1,0 +1,42 @@
+// ====================
+// Header
+// ====================
+header
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 40px
+  z-index: 200
+
+
+// ====================
+// Search term
+// ====================
+.search-term-desktop
+  display: none
+
+.search-term-mobile
+  display: block
+
+  @media (min-width: $screen-sm-min)
+    display: none !important
+
+body.search-results-view
+  .search-term-desktop
+    @media (min-width: $screen-sm-min)
+      display: inline-block
+
+
+// ====================
+// Banners
+// ====================
+.banner-container
+  display: none
+
+  .flex-center
+    height: 200px
+    width: 100%
+
+  @media (min-width: $screen-sm-min)
+    display: flex

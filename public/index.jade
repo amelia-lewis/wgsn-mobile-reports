@@ -1,0 +1,16 @@
+extends layout
+
+include partials/mixins/report-tile
+//- img, category, title, date
+
+block append vars
+  - bodyclass = 'index'
+
+block content
+  .content-wrap.block-ver-lg
+    .row
+      .col-xs-12.col-sm-6.col-md-3: +article-tile("../img/rectangle.jpg", "Colour", "Women's Colour S/S 18: Youth Tonic", "13.07.16")
+      .col-xs-12.col-sm-6.col-md-3: +article-tile("../img/rectangle.jpg", "Colour", "Women's Colour S/S 18: Youth Tonic", "13.07.16")
+      .col-xs-12.col-sm-6.col-md-3: +article-tile("../img/rectangle.jpg", "Colour", "Women's Colour S/S 18: Youth Tonic", "13.07.16")
+      .col-xs-12.col-sm-6.col-md-3: +article-tile("../img/rectangle.jpg", "Colour", "Women's Colour S/S 18: Youth Tonic", "13.07.16")
+      .col-xs-12.col-sm-6.col-md-3: +article-tile("../img/rectangle.jpg", "Colour", "Women's Colour S/S 18: Youth Tonic", "13.07.16")

@@ -1,0 +1,22 @@
+extends ../layout
+
+block append vars
+  - bodyclass = 'report-view'
+
+block content
+  .report-header.block-sm.overflow-auto.bg-white.border-bottom
+    i.fa.fa-angle-down.pull-left
+    h4.pull-left.text-uppercase.tight Women's Colour S/S 18: Youth Tonic
+    i.fa.fa-ellipsis-h.pull-right
+
+  //- SWIPER
+  .swiper-container
+    .swiper-wrapper
+      .swiper-slide.cover: include slide-1
+      .swiper-slide: include slide-2
+      .swiper-slide: include slide-2
+      .swiper-slide: include slide-2
+      .swiper-slide: include slide-2
+
+    .swiper-button-prev.flex-center.border: i.fa.fa-angle-left
+    .swiper-button-next.flex-center.border: i.fa.fa-angle-right
