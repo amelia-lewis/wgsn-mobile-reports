@@ -7,10 +7,6 @@
   .swiper-wrapper
     .swiper-slide
       overflow-y: scroll
-      @extend .border-right
-
-      &.cover
-        border-right: none
 
       &:not(.cover)
         padding: 50px 0 40px
@@ -30,18 +26,57 @@
       img + .caption
         margin-top: -10px
 
-  // .swiper-button-prev,
-  // .swiper-button-next
-  //   top: auto
-  //   bottom: 0
-  //   width: 40px
-  //   height: 40px
-  //   background: white
-  //   margin: 0
+  .swiper-button-prev,
+  .swiper-button-next
+    position: fixed
+    top: auto
+    bottom: 0
+    width: 40px
+    height: 40px
+    margin: 0
+    opacity: 0
+    z-index: 80
 
-  // .swiper-button-prev
-  //   left: auto
-  //   right: 39px
+    &.show
+      opacity: 0.85
 
-  // .swiper-button-next
-  //   right: 0
+  .swiper-button-prev
+    left: 0
+
+  .swiper-button-next
+    right: 0
+
+.swiper-pagination
+  .swiper-pagination-bullet
+    width: auto
+    height: auto
+    border-radius: 0
+    opacity: 1
+    display: none
+    @extend .wgsn-font
+    font-size: 10px
+    margin-top: 3px
+
+  .swiper-pagination-bullet-active
+    display: block
+    background: none
+
+
+// ====================
+// Report Styling
+// ====================
+.swiper-container
+  .swiper-wrapper
+    .swiper-slide
+      h1
+        @extend .sans-serif
+        @extend .text-lighter
+        padding: 0 0 2px
+        margin: 0 20px 8px
+        width: calc(100% - 40px)
+        border-bottom: 1px solid #3d723d 
+      
+      h3
+        @extend .sans-serif
+        @extend .text-bold
+        @extend .text-spaced

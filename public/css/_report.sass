@@ -6,9 +6,11 @@
   width: 100%
   z-index: 200
 
-  h4
+  h3
     @extend .text-truncate
     width: calc(100% - 2 * (#{$report-header-height}))
+    margin-top: 3px
+    font-size: 12px
 
   .btn-related-reports,
   .btn-context-menu
@@ -24,6 +26,13 @@
   z-index: 80
   opacity: 0
   pointer-events: none
+
+  h4
+    margin-top: 3px
+    font-size: 10px
+
+  .icon
+    margin-top: 1px
 
   &.show
     opacity: 0.85

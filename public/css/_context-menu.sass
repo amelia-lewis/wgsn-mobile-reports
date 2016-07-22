@@ -22,9 +22,11 @@
   @extend .transition
   transform: translate(0, 100%)
   z-index: 100
+  box-shadow: 0 -3px 10px rgba(black, 0)
 
   &.show
     transform: translate(0, 0) !important
+    box-shadow: 0 -1px 15px rgba(black, 0.1)
 
   .context-menu-header
     @extend .bg-lt-grey
@@ -34,16 +36,28 @@
     ul
       @extend .tight
       // max-height: calc(100vh - #{$report-header-height} - #{$report-page-title-height} - 41px)
-      max-height: 400px
+      max-height: 420px
       overflow: auto
       
       li
         @extend .block-sm
         @extend .tight
         @extend .border-bottom
+        @extend .bg-white
+
+        .icon
+          margin-right: 10px
+
+        small
+          display: block
+          line-height: 1.2em
 
         &:last-of-type
           border-bottom: none
+
+        &.active
+          color: $fashion
+          @extend .text-bold
 
 // #page-list
 //   top: $report-header-height + $report-page-title-height

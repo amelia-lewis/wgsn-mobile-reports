@@ -6,26 +6,30 @@ block append vars
 block content
   //- REPORT HEADER BAR
   .report-header.overflow-auto.bg-white.border-bottom
-    .btn-related-reports.pull-left.flex-center: i.fa.fa-angle-down
-    h4.pull-left.block-ver-sm.text-uppercase.tight Women's Colour S/S 18: Youth Tonic
-    .btn-context-menu.pull-right.flex-center: i.fa.fa-ellipsis-h
+    .btn-related-reports.pull-left.flex-center: i.icon.icon-related-reports
+    h3.pull-left.block-ver-sm.text-uppercase Governors Ball 2016 – Young Women Apparel
+    .btn-context-menu.pull-right.flex-center: i.icon.icon-ellipsis
 
   //- REPORT PAGE TITLE BAR
   .btn-page-title.show.block-hor-sm.block-ver-xs.bg-black.overflow-auto.transition
-    p.tight.text-uppercase.text-smaller.pull-left 2. Introduction
-    i.fa.fa-list.pull-right
+    //- h4.text-uppercase.text-smaller.pull-left 2. Introduction
+    .swiper-pagination
+    i.icon.icon-list.pull-right
 
   //- SWIPER
   .swiper-container
     .swiper-wrapper
-      .swiper-slide.cover.flex-center.bg-lt-grey: include slide-1
-      .swiper-slide: include slide-2
-      .swiper-slide: include slide-2
-      .swiper-slide: include slide-2
-      .swiper-slide: include slide-2
+      .swiper-slide.cover.flex-center.bg-lt-grey(data-hash="slide1"): include slide-1
+      .swiper-slide(data-hash="slide2"): include slide-2
+      .swiper-slide(data-hash="slide3"): include slide-3
+      .swiper-slide(data-hash="slide4"): include slide-4
+      .swiper-slide(data-hash="slide5"): include slide-5
+      .swiper-slide(data-hash="slide6"): include slide-6
+      .swiper-slide(data-hash="slide7"): include slide-7
+      .swiper-slide(data-hash="slide8"): include slide-8
 
-    //- .swiper-button-prev.flex-center.bg-white.border: i.fa.fa-angle-left
-    //- .swiper-button-next.flex-center.bg-white.border: i.fa.fa-angle-right
+    .swiper-button-prev.flex-center.bg-white.transition.show: i.icon.icon-angle-left
+    .swiper-button-next.flex-center.bg-white.transition.show: i.icon.icon-angle-right
 
   .context-menu-overlay.transition
   include context-menu
