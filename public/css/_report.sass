@@ -10,14 +10,13 @@
     @extend .text-truncate
     width: calc(100% - 2 * (#{$report-header-height}))
     margin-top: 3px
-    font-size: 12px
 
   .btn-related-reports,
   .btn-context-menu
     width: $report-header-height
     height: $report-header-height
 
-.btn-page-title
+.report-header + .btn-page-list
   position: fixed
   top: $report-header-height
   left: 0
@@ -29,7 +28,6 @@
 
   h4
     margin-top: 3px
-    font-size: 10px
 
   .icon
     margin-top: 1px

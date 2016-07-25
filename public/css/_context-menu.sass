@@ -31,6 +31,7 @@
   .context-menu-header
     @extend .border-bottom
     @extend .block-sm
+    @extend .bg-xlt-grey
 
   .context-menu-content
     ul
@@ -58,6 +59,10 @@
         &.active
           color: $fashion
           @extend .text-bold
+
+          a
+            color: $fashion
+            @extend .text-bold          
 
 // #page-list
 //   top: $report-header-height + $report-page-title-height

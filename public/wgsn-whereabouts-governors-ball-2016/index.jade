@@ -1,0 +1,26 @@
+extends ../layout
+
+block append vars
+  - bodyclass = 'report-view'
+
+block content
+  //- REPORT HEADER BAR
+  .report-header.overflow-auto.bg-white.border-bottom
+    .btn-related-reports.pull-left.flex-center: i.icon.icon-related-reports
+    h3.pull-left.block-ver-sm.text-uppercase WGSN Whereabouts: Governors Ball 2016
+    .btn-context-menu.pull-right.flex-center: i.icon.icon-ellipsis
+
+  //- SWIPER
+  .swiper-container#report-wgsn-whereabouts-governors-ball-2016
+    .swiper-wrapper
+      .swiper-slide(data-hash="slide1"): include slide-1
+
+    .swiper-button-prev.flex-center.bg-white.transition.show: i.icon.icon-angle-left
+    .swiper-button-next.flex-center.bg-white.transition.show: i.icon.icon-angle-right
+
+  .context-menu-overlay.transition
+  include context-menu
+  include page-list
+  include related-reports
+  include info
+  include language

@@ -8,9 +8,7 @@ script(src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery
 
 script.
   $(document).ready(function () {
-    //initialize swiper when document ready  
     var mySwiper = new Swiper ('.swiper-container', {
-      // Optional parameters
       direction: 'horizontal',
       pagination: '.swiper-pagination',
       pageNames: ["Cover", "Boho Mood", "Edgy Western", "Woodstock Hippy", "Mesh Exposure", "Twinsets", "Vintage Music Tees", "Bomber Jackets"],
@@ -32,7 +30,7 @@ script.
       $('#context-menu, #page-list, #related-reports').removeClass('show')
     }
 
-    $('.btn-page-title, .swiper-button-prev, .swiper-button-next').toggleClass('show');
+    $('.btn-page-list, .swiper-button-prev, .swiper-button-next').toggleClass('show');
 
     //- if (!$(e.target).is('.swiper-button-next') && !$(e.target).is('.swiper-button-prev')) {
     //-   $('.btn-page-title, .swiper-button-prev, .swiper-button-next').toggleClass('show');
@@ -46,7 +44,7 @@ script.
 
   //- report context menu
   $('.btn-context-menu').on('click', function() {
-    $('#page-list, #related-reports').removeClass('show');
+    $('#page-list, #related-reports, #info, #language').removeClass('show');
 
     if($('#context-menu').hasClass('show')) {
       $('.context-menu-overlay, #context-menu').removeClass('show');
@@ -56,8 +54,8 @@ script.
   })
 
   //- report page list
-  $('.btn-page-title').on('click', function() {
-    $('#context-menu, #related-reports').removeClass('show');
+  $('.btn-page-list').on('click', function() {
+    $('#context-menu, #related-reports, #info, #language').removeClass('show');
 
     if($('#page-list').hasClass('show')) {
       $('.context-menu-overlay, #page-list').removeClass('show');
@@ -68,12 +66,34 @@ script.
 
   //- report page list
   $('.btn-related-reports').on('click', function() {
-    $('#context-menu, #page-list').removeClass('show');
+    $('#context-menu, #page-list, #info, #language').removeClass('show');
 
     if($('#related-reports').hasClass('show')) {
       $('.context-menu-overlay, #related-reports').removeClass('show');
     } else {
       $('.context-menu-overlay, #related-reports').addClass('show');
+    }
+  })
+
+  //- report info
+  $('.btn-info').on('click', function() {
+    $('#context-menu, #page-list, #related-reports, #language').removeClass('show');
+
+    if($('#info').hasClass('show')) {
+      $('.context-menu-overlay, #info').removeClass('show');
+    } else {
+      $('.context-menu-overlay, #info').addClass('show');
+    }
+  })
+
+  //- report language
+  $('.btn-language').on('click', function() {
+    $('#context-menu, #page-list, #related-reports, #info').removeClass('show');
+
+    if($('#language').hasClass('show')) {
+      $('.context-menu-overlay, #language').removeClass('show');
+    } else {
+      $('.context-menu-overlay, #language').addClass('show');
     }
   })
 

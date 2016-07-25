@@ -15,9 +15,13 @@
         width: 100%
         padding: 0 20px
 
-      img
+      img, video
         width: 100%
         margin: 0 0 10px
+
+      video
+        @extend .border-top
+        @extend .border-bottom
 
       .caption
         @extend .text-smaller
@@ -60,23 +64,3 @@
   .swiper-pagination-bullet-active
     display: block
     background: none
-
-
-// ====================
-// Report Styling
-// ====================
-.swiper-container
-  .swiper-wrapper
-    .swiper-slide
-      h1
-        @extend .sans-serif
-        @extend .text-lighter
-        padding: 0 0 2px
-        margin: 0 20px 8px
-        width: calc(100% - 40px)
-        border-bottom: 1px solid #3d723d 
-      
-      h3
-        @extend .sans-serif
-        @extend .text-bold
-        @extend .text-spaced

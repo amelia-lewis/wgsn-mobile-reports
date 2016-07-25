@@ -11,13 +11,12 @@ block content
     .btn-context-menu.pull-right.flex-center: i.icon.icon-ellipsis
 
   //- REPORT PAGE TITLE BAR
-  .btn-page-title.show.block-hor-sm.block-ver-xs.bg-black.overflow-auto.transition
-    //- h4.text-uppercase.text-smaller.pull-left 2. Introduction
+  .btn-page-list.show.block-hor-sm.block-ver-xs.bg-black.overflow-auto.transition
     .swiper-pagination
     i.icon.icon-list.pull-right
 
   //- SWIPER
-  .swiper-container
+  .swiper-container#report-governors-ball-2016-young-women-apparel
     .swiper-wrapper
       .swiper-slide.cover.flex-center.bg-lt-grey(data-hash="slide1"): include slide-1
       .swiper-slide(data-hash="slide2"): include slide-2
@@ -35,3 +34,5 @@ block content
   include context-menu
   include page-list
   include related-reports
+  include info
+  include language
