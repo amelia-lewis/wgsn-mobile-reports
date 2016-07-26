@@ -8,8 +8,12 @@
     .swiper-slide
       overflow-y: scroll
 
+      &.cover
+        @extend .flex-center
+        @extend .bg-lt-grey
+
       &:not(.cover)
-        padding: 50px 0 40px
+        padding: 50px 0 0
       
       h1, h2, h3, h4, p
         width: 100%
@@ -29,6 +33,11 @@
 
       img + .caption
         margin-top: -10px
+
+      .report-logo
+        height: 16px
+        width: auto
+        margin: 0 auto 10px
 
   .swiper-button-prev,
   .swiper-button-next

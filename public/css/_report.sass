@@ -6,12 +6,18 @@
   width: 100%
   z-index: 200
 
-  h3
-    @extend .text-truncate
-    width: calc(100% - 2 * (#{$report-header-height}))
-    margin-top: 3px
+  .btn-related-reports
+    width: calc(100% - (#{$report-header-height}))
 
-  .btn-related-reports,
+    h3
+      @extend .text-truncate
+      width: auto
+      max-width: calc(100% - (#{$report-header-height}))
+      margin: 3px 0 0
+
+    .icon
+      margin: 2px 0 0 5px
+
   .btn-context-menu
     width: $report-header-height
     height: $report-header-height

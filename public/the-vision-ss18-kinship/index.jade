@@ -1,0 +1,53 @@
+extends ../layout
+
+block append vars
+  - bodyclass = 'report-view'
+
+block content
+  //- REPORT HEADER BAR
+  .report-header.overflow-auto.bg-white.border-bottom
+    .btn-related-reports.pull-left.overflow-auto
+      h3.pull-left.block-top-sm.block-left-sm.text-uppercase The Vision S/S 18: Kinship
+      i.icon.icon-caret-down.inline-block.block-top-sm
+    .btn-context-menu.pull-right.flex-center: i.icon.icon-ellipsis
+
+  //- REPORT PAGE TITLE BAR
+  .btn-page-list.show.block-hor-sm.block-ver-xs.bg-black.overflow-auto.transition
+    .swiper-pagination
+    i.icon.icon-list.pull-right
+
+  //- SWIPER
+  .swiper-container#report-the-vision-ss18-kinship
+    .swiper-wrapper
+      .swiper-slide.cover(data-hash="slide1"): include slide-1
+      .swiper-slide.cover(data-hash="slide2"): include slide-2
+      .swiper-slide.cover(data-hash="slide3"): include slide-3
+      .swiper-slide.cover(data-hash="slide4"): include slide-4
+      .swiper-slide.cover(data-hash="slide5"): include slide-5
+      .swiper-slide.cover(data-hash="slide6"): include slide-6
+      .swiper-slide.cover(data-hash="slide7"): include slide-7
+      .swiper-slide.cover(data-hash="slide8"): include slide-8
+      .swiper-slide.cover(data-hash="slide9"): include slide-9
+      .swiper-slide.cover(data-hash="slide10"): include slide-10
+      .swiper-slide.cover(data-hash="slide11"): include slide-11
+      .swiper-slide.cover(data-hash="slide12"): include slide-12
+      .swiper-slide.cover(data-hash="slide13"): include slide-13
+      .swiper-slide.cover(data-hash="slide14"): include slide-14
+      .swiper-slide.cover(data-hash="slide15"): include slide-15
+      .swiper-slide.cover(data-hash="slide16"): include slide-16
+      .swiper-slide.cover(data-hash="slide17"): include slide-17
+      .swiper-slide.cover(data-hash="slide18"): include slide-18
+      .swiper-slide.cover(data-hash="slide19"): include slide-19
+      .swiper-slide.cover(data-hash="slide20"): include slide-20
+      .swiper-slide.cover(data-hash="slide21"): include slide-21
+      .swiper-slide.cover(data-hash="slide22"): include slide-22
+
+    .swiper-button-prev.flex-center.bg-white.transition.show: i.icon.icon-angle-left
+    .swiper-button-next.flex-center.bg-white.transition.show: i.icon.icon-angle-right
+
+  .context-menu-overlay.transition
+  include context-menu
+  include page-list
+  include related-reports
+  include info
+  include language
