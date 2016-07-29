@@ -2,9 +2,16 @@
   .swiper-wrapper
     .swiper-slide
       &:not(.cover)
-        padding: 20px 0 40px
+        padding: 0
+
+      video
+        border-top: none
       
       p
         background: #f5f5f5
         padding: 20px
         @extend .text-spaced
+
+  .swiper-button-prev,
+  .swiper-button-next
+    display: none

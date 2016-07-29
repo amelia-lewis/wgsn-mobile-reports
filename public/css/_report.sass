@@ -8,7 +8,7 @@
   overflow: hidden
 
   .btn-related-reports
-    width: calc(100% - (#{$report-header-height}))
+    width: calc(100% - (2 * #{$report-header-height}))
     overflow: hidden
 
     h3
@@ -19,6 +19,11 @@
 
     .icon
       margin: 2px 0 0 5px
+
+  .btn-back
+    width: $report-header-height
+    height: $report-header-height
+    @extend .border-right
 
   .btn-context-menu
     width: $report-header-height

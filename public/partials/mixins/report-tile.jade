@@ -1,0 +1,7 @@
+mixin report-tile(link, img, category, title, date)
+  a.report-tile.block.border(href=link)
+    img(src=img width="100%")
+    .block-sm.bg-white
+      p.text-grey.text-smaller.tight= category
+      h2.tight= title
+      p.text-grey.text-smaller.tight= date
