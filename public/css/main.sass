@@ -23,7 +23,6 @@ body
   padding: 0
   font-size: 16px
   overflow-x: hidden
-  @extend .bg-xlt-grey
 
   #content
     position: relative
@@ -32,6 +31,9 @@ body
     width: calc(100% - 20px)
     max-width: 1000px
     margin: 0 auto
+
+  &.index
+    @extend .bg-xlt-grey
 
 *
   box-sizing: border-box
