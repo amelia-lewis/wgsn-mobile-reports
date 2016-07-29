@@ -20,8 +20,16 @@ block content
     .swiper-button-next.flex-center.bg-white.transition.show: i.icon.icon-angle-right
 
   .context-menu-overlay.transition
-  include context-menu
-  include page-list
+  include ../partials/context-menu
+  
+  include ../partials/page-list
+  +page-list("1. Cover")
+  
   include related-reports
-  include info
-  include language
+  
+  include ../partials/info
+  +info("WGSN Whereabouts: Governors Ball 2016", "Jaime Cohn-Barr, the WGSN Video Team", "09.06.16", "Fashion Office", "Street Style > Festivals & Events > Music Festivals")
+  
+  include ../partials/language
+  
+  include ../partials/save-to-workspace

@@ -46,8 +46,16 @@ block content
     .swiper-button-next.flex-center.bg-white.transition.show: i.icon.icon-angle-right
 
   .context-menu-overlay.transition
-  include context-menu
-  include page-list
+  include ../partials/context-menu
+  
+  include ../partials/page-list
+  +page-list("1. Cover", "2. Context", "3. Key Takeaways", "4. Quote", "5. The New Silk Road", "6. New Masculinity", "7. Face of Nations", "8. Good Sports", "9. Companionship Culture", "10. Shared Lands", "11. Art Across Borders", "12. Once Upon... Design &amp; Data", "13. Modern Mariner", "14. Treasured Intricacy", "15. Distrupted Craft", "16. Mass Influencers", "17. Thought Starters", "18. Research &amp; References", "19. Related Reports", "20. The Vision Videos", "21. Index", "22. Seasonal Drops")
+  
   include related-reports
-  include info
-  include language
+  
+  include ../partials/info
+  +info("The Vision S/S 18: Kinship", "The WGSN Vision Team", "10.05.16", "Fashion Office", "Future Trends > S/S 18 > The Vision")
+  
+  include ../partials/language
+  
+  include ../partials/save-to-workspace

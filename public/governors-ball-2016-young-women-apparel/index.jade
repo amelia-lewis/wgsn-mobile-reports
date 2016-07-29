@@ -32,8 +32,17 @@ block content
     .swiper-button-next.flex-center.bg-white.transition.show: i.icon.icon-angle-right
 
   .context-menu-overlay.transition
-  include context-menu
-  include page-list
+  
+  include ../partials/context-menu
+  
+  include ../partials/page-list
+  +page-list("1. Cover", "2. Boho Mood", "3. Edgy Western", "4. Woodstock Hippy", "5. Mesh Exposure", "6. Twinsets", "7. Vintage Music Tees", "8. Bomber Jackets")
+  
   include related-reports
-  include info
-  include language
+  
+  include ../partials/info
+  +info("Governors Ball 2016 – Young Women Apparel", "Anupreet Bhui", "09.06.16", "Fashion Office", "Street Style > Festivals & Events > Music Festivals")
+  
+  include ../partials/language
+  
+  include ../partials/save-to-workspace

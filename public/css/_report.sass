@@ -5,9 +5,11 @@
   height: $report-header-height
   width: 100%
   z-index: 200
+  overflow: hidden
 
   .btn-related-reports
     width: calc(100% - (#{$report-header-height}))
+    overflow: hidden
 
     h3
       @extend .text-truncate
@@ -21,6 +23,7 @@
   .btn-context-menu
     width: $report-header-height
     height: $report-header-height
+    @extend .border-left
 
 .report-header + .btn-page-list
   position: fixed

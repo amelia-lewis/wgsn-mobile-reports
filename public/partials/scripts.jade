@@ -44,7 +44,7 @@ script.
 
   //- report context menu
   $('.btn-context-menu').on('click', function() {
-    $('#page-list, #related-reports, #info, #language').removeClass('show');
+    $('#page-list, #related-reports, #info, #language, #save-to-workspace').removeClass('show');
 
     if($('#context-menu').hasClass('show')) {
       $('.context-menu-overlay, #context-menu').removeClass('show');
@@ -55,7 +55,7 @@ script.
 
   //- report page list
   $('.btn-page-list').on('click', function() {
-    $('#context-menu, #related-reports, #info, #language').removeClass('show');
+    $('#context-menu, #related-reports, #info, #language, #save-to-workspace').removeClass('show');
 
     if($('#page-list').hasClass('show')) {
       $('.context-menu-overlay, #page-list').removeClass('show');
@@ -66,7 +66,7 @@ script.
 
   //- report page list
   $('.btn-related-reports').on('click', function() {
-    $('#context-menu, #page-list, #info, #language').removeClass('show');
+    $('#context-menu, #page-list, #info, #language, #save-to-workspace').removeClass('show');
 
     if($('#related-reports').hasClass('show')) {
       $('.context-menu-overlay, #related-reports').removeClass('show');
@@ -77,7 +77,7 @@ script.
 
   //- report info
   $('.btn-info').on('click', function() {
-    $('#context-menu, #page-list, #related-reports, #language').removeClass('show');
+    $('#context-menu, #page-list, #related-reports, #language, #save-to-workspace').removeClass('show');
 
     if($('#info').hasClass('show')) {
       $('.context-menu-overlay, #info').removeClass('show');
@@ -88,12 +88,23 @@ script.
 
   //- report language
   $('.btn-language').on('click', function() {
-    $('#context-menu, #page-list, #related-reports, #info').removeClass('show');
+    $('#context-menu, #page-list, #related-reports, #info, #save-to-workspace').removeClass('show');
 
     if($('#language').hasClass('show')) {
       $('.context-menu-overlay, #language').removeClass('show');
     } else {
       $('.context-menu-overlay, #language').addClass('show');
+    }
+  })
+
+  //- save to workspace
+  $('.btn-save-to-workspace').on('click', function() {
+    $('#context-menu, #page-list, #related-reports, #info, #language').removeClass('show');
+
+    if($('#save-to-workspace').hasClass('show')) {
+      $('.context-menu-overlay, #save-to-workspace').removeClass('show');
+    } else {
+      $('.context-menu-overlay, #save-to-workspace').addClass('show');
     }
   })
 

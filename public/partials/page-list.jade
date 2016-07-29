@@ -1,0 +1,9 @@
+mixin page-list(...pages)
+  #page-list.context-menu
+    .context-menu-header
+      h3.text-uppercase.tight Page List
+
+    .context-menu-content
+      ul.ul-bare
+        each page in pages
+          li= page

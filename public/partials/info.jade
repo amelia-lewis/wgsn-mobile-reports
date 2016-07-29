@@ -1,0 +1,27 @@
+mixin info(title, author, date, type, category)
+  #info.context-menu
+    .context-menu-header
+      h3.text-uppercase.tight Information
+
+    .context-menu-content
+      ul.ul-bare
+        li
+          .row
+            .col-xs-3: p.text-bold.text-tight Title:
+            .col-xs-9: p.text-tight= title
+
+          .row
+            .col-xs-3: p.text-bold.text-tight Author:
+            .col-xs-9: p.text-tight= author
+
+          .row
+            .col-xs-3: p.text-bold.text-tight Date:
+            .col-xs-9: p.text-tight= date
+          
+          .row
+            .col-xs-3: p.text-bold.text-tight Type:
+            .col-xs-9: p.text-tight= type
+
+          .row
+            .col-xs-3: p.text-bold.text-tight Category:
+            .col-xs-9: p.text-tight= category
