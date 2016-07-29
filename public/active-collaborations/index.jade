@@ -1,0 +1,49 @@
+extends ../layout
+
+block append vars
+  - bodyclass = 'report-view'
+
+block content
+  //- REPORT HEADER BAR
+  .report-header.overflow-auto.bg-white.border-bottom
+    a.btn-back.pull-left.flex-center(href="/"): i.icon.icon-angle-left
+    .btn-related-reports.pull-left.overflow-auto
+      h3.pull-left.block-top-sm.block-left-sm.text-uppercase Active Collaborations
+      i.icon.icon-caret-down.inline-block.block-top-sm
+    .btn-context-menu.pull-right.flex-center: i.icon.icon-ellipsis
+
+  //- REPORT PAGE TITLE BAR
+  .btn-page-list.show.block-hor-sm.block-ver-xs.bg-black.overflow-auto.transition
+    .swiper-pagination
+    i.icon.icon-list.pull-right
+
+  //- SWIPER
+  .swiper-container#report-active-collaborations
+    .swiper-wrapper
+      .swiper-slide.cover(data-hash="slide1"): include slide-1
+      .swiper-slide(data-hash="slide2"): include slide-2
+      .swiper-slide(data-hash="slide3"): include slide-3
+      .swiper-slide(data-hash="slide4"): include slide-4
+      .swiper-slide(data-hash="slide5"): include slide-5
+      .swiper-slide(data-hash="slide6"): include slide-6
+      .swiper-slide(data-hash="slide7"): include slide-7
+      .swiper-slide(data-hash="slide8"): include slide-8
+
+    .swiper-button-prev.flex-center.bg-white.transition.show: i.icon.icon-angle-left
+    .swiper-button-next.flex-center.bg-white.transition.show: i.icon.icon-angle-right
+
+  .context-menu-overlay.transition
+  
+  include ../partials/context-menu
+  
+  include ../partials/page-list
+  +page-list("1. Cover", "2. Overview", "3. Cushnie et Ochs x Bandier", "4. A.P.C. x Outdoor Voices", "5. Matthew Williamson x USA Pro", "6. adidas Y-3 Sport Collection", "7. Jason Wu x fila", "8. Charlotte Olympia x Bodyism", "9. NikeLab x RT: Training Redefined", "10. NikeLab: Olivier Rousteing", "11. NikeLab: Kim Jones", "12. Tim Coppens x Under Armour")
+  
+  include related-reports
+  
+  include ../partials/info
+  +info("Active Collaborations", "Cassandra Napoli", "27.06.16", "Fashion Office", "Marketing > Campaigns > Trends & Inspiration")
+  
+  include ../partials/language
+  
+  include ../partials/save-to-workspace

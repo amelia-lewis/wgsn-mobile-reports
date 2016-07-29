@@ -7,6 +7,7 @@
   .swiper-wrapper
     .swiper-slide
       overflow-y: scroll
+      @extend .bg-white
 
       &.cover
         @extend .flex-center
@@ -33,6 +34,7 @@
 
       img + .caption
         margin-top: -10px
+        padding: 0 10px
 
       .report-logo
         height: 16px
