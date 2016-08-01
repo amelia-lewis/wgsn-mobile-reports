@@ -21,6 +21,7 @@
         padding: 0 20px
 
       img, video
+        display: block
         width: 100%
         margin: 0 0 10px
 
@@ -30,11 +31,11 @@
 
       .caption
         @extend .text-smaller
-        @extend .text-grey
-
-      img + .caption
-        margin-top: -10px
+        position: relative
+        margin: -27px 0 20px
         padding: 0 10px
+        z-index: 10
+        background: rgba(white, 0.5)
 
       .report-logo
         height: 16px
